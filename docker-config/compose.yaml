@@ -1,0 +1,29 @@
+services:
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+    - "27017:27017"
+    networks:
+    - net
+    volumes:
+    - mongo-data:/data/db
+    - mongo-data-config:/data/configdb
+    restart: always
+    environment:
+    - MONGO_INITDB_ROOT_USERNAME=docker
+    - MONGO_INITDB_ROOT_PASSWORD=mongopw
+  human-resource-department:
+    container_name: human-resource-department
+    image: eeengcs/human-resource-department:1.0.0-SNAPSHOT
+    depends_on:
+    - mongo
+    ports:
+    - "8380:8080"
+    networks:
+    - net
+networks:
+  net:
+volumes:
+  mongo-data:
+  mongo-data-config:

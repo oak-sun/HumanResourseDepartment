@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+<title>Human Resource Department</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="shortcut icon" href="favicon.ico"/>
+<style>
+	h2{
+		text-align: center;
+		font-family: Inconsolata, cursive, sans-serif;
+		color: #f8f0da;
+		background-color: rgba(255, 20, 147, 0.99);
+	}
+body{
+	background: url("abstract-arrangements-landscapes-mountains_791316-101.jpg") no-repeat;
+
+	background-size: 100%;
+
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid #3e61c8;
+}
+caption {
+  padding: 5px;
+}
+table td {
+  padding: 3px;
+  border: 2px solid #3e61c8;
+}
+table tr:hover td {
+  background: rgb(184, 200, 235);
+}
+.col-1 {
+  width: 30%
+}
+.col-2 {
+  width: 70%
+}
+.col-3 {
+  width: 25%
+}
+</style>	
+</head>
+<body>
+
+<h2>Human Resources Department</h2>
+
+<table>
+<tr><td class="col-1">
+	Load  dataset
+</td><td class="col-2">
+	<a href="/loadDataset">/loadDataset</a>
+</td></tr>
+</table>
+<p>
+<table>
+<tr><td class="col-1">
+	Find <b>office and workers</b> by office name
+</td><td class="col-2">
+	<a href="/staff/find/findByOfficeName?officeName=D-Name-1">
+		/staff/find/findByOfficeName?officeName=D-Name-1</a><br/>
+	&nbsp;<br/>
+	<a href="/staffFlux/find/findByOfficeName?officeName=D-Name-1">
+		/staffFlux/find/findByOfficeName?officeName=D-Name-1</a>
+</td></tr>
+<tr><td class="col-1">
+	Find <b>all offices</b>
+</td><td class="col-2">
+	<a href="/offices">/offices</a>
+</td></tr>
+ <tr><td class="col-1">
+	Find <b>office</b> by name
+</td><td class="col-2">
+	<a href="/offices/find/findByName?name=D-Name-1">/offices/find/findByName?name=D-Name-1</a>
+</td></tr>
+<tr><td class="col-1">
+	Find <b>all workers</b>
+</td><td class="col-2">
+	<a href="/workers">/workers</a>
+</td></tr>
+<tr><td class="col-1">
+	Find <b>worker</b> by first and last name
+</td><td class="col-2">
+	<a href="/workers/find/findByFirstNameAndLastName?firstName=EF-Name-101&lastName=EL-Name-101">
+	/workers/find/findByFirstNameAndLastName?firstName=EF-Name-101&amp;lastName=EL-Name-101</a>
+</td></tr>
+</table>
+<p>
+<hr/>
+
+<table>
+	<caption>The SpringBoot <q><b>Actuator</b></q> links</caption>
+	<tr><td class="col-green">
+		<a href="/actuator">List of Actuator Endpoints</a><br/>
+	</td><td class="col-green">
+		<a href="/actuator/health">Application Health</a><br/>
+	</td><td class="col-green">
+		<a href="/actuator/mappings">URL Mappings</a><br/>
+	</td></tr>
+	<tr><td class="col-green">
+		<a href="/actuator/metrics/">Metrics</a><br/>
+	</td><td class="col-green">
+		<a href="/actuator/metrics/http.server.requests">Metrics 'http.server.requests'</a><br/>
+	</td><td class="col-green">
+		<a href="/actuator/beans">Beans</a><br/>
+	</td></tr>
+	<tr><td class="col-green">
+		<a href="/actuator/configprops">Configuration Properties</a><br/>
+	</td><td class="col-green">
+		<a href="/actuator/env">Environment</a><br/>
+	</td><td class="col-green">
+		&nbsp;
+	</td></tr>
+</table>
+
+<p>
+
+<table>
+	<caption>The <q><b>Search</b></q> links (created by 'ReactiveMongoRepository')</caption>
+	<tr><td class="col-green">
+		<a href="/offices/search">/offices/search</a>
+	</td><td class="col-green">
+		<a href="/matchstaffs/search">/matchstaffs/search</a>
+	</td><td class="col-green">
+		&nbsp;
+	</td></tr>
+</table>
+
+<p>
+
+<table>
+	<caption>The <q><b>Application-Level Profile Semantics</b></q> links</caption>
+	<tr><td class="col-green">
+		<a href="/profile/offices">/profile/offices</a>
+	</td><td class="col-green">
+		<a href="/profile/workers">/profile/workers</a>
+	</td><td class="col-green">
+		<a href="/profile/matchstaffs">/profile/matchstaffs</a>
+	</td></tr>
+</table>
+
+<p>
+<hr/>
+</body>
+</html>
